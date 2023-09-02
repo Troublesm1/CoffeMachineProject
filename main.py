@@ -33,11 +33,21 @@ resources = {
 }
 
 def is_resource_sufficient(order_ingredients):
+    """Returns True when the order can be made, False if the ingredients are insufficient."""
     for item in order_ingredients:
         if order_ingredients[item] >= resources[item]:
             print(f'"Sorry there is not enough {item}."')
             return False
     return True
+
+def process_coins():
+    """Returns the total calculated from the coins inserted."""
+    print("Please insert coins.")
+    total = int(input("How many quarters?: ")) * 0.25
+    total += int(input("How many dimes?: ")) * 0.1
+    total += int(input("How many nickles?: ")) * 0.05
+    total += int(input("How many pennies?: ")) * 0.01
+    return total
 
 is_on = True
 
@@ -53,6 +63,7 @@ while is_on:
     else:
         drink = MENU[choice]
         if is_resource_sufficient(drink["ingredients"]):
+            payment = process_coins()
 
 
 # TODO: 1. Print a report of all the coffee machine resources
