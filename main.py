@@ -1,5 +1,3 @@
-# This is a sample Python script.
-
 MENU = {
     "espresso": {
         "ingredients": {
@@ -31,6 +29,14 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+
+is_on = True
+
+while is_on:
+    choice = input("What would you like? (espresso/latte/cappuccino): ")
+    if choice == "off":
+        is_on = False
+
 
 # TODO: 1. Print a report of all the coffee machine resources
 # TODO: 2. Check resources are sufficient to fill order
