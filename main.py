@@ -32,3 +32,8 @@ resources = {
     "coffee": 100,
 }
 
+# TODO: 1. Print a report of all the coffee machine resources
+# TODO: 2. Check resources are sufficient to fill order
+# TODO: 3. Process coins
+# TODO: 4. Check if the transaction was successful
+# TODO: 5. Make Coffee
